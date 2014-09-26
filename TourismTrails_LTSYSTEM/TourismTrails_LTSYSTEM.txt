@@ -1,0 +1,275 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: Green Mountain Club
+      Publication_Date: 20060601
+      Publication_Time: unknown
+      Title: TourismTrails_LTSYSTEM
+      Edition: 2006A
+      Geospatial_Data_Presentation_Form: vector digital data
+      Series_Information:
+        Series_Name: Long Trail System trail network
+        Issue_Identification: 2006A
+      Publication_Information:
+        Publication_Place: Waterbury Center, VT
+        Publisher: Green Mountain Club
+      Other_Citation_Details: Tile Structure - STATE
+      Online_Linkage: http://www.vcgi.org/dataware/default.cfm?layer=TourismTrails_LTSYSTEM
+      Online_Linkage: http://www.vcgi.org/dataware/default.cfm?layer=TourismTrails_LTSYSTEM&mapit=yes
+      Online_Linkage: http://maps.vcgi.org:8080/wmsconnector/com.esri.wms.Esrimap?servicename=DATAWARE_VCGI&VERSION=1.1.1&request=getmap&BBOX=-73.45416,42.72279,-71.46528,45.018356&SRS=EPSG:4326&LAYERS=TOURISM_LTSYSTEM_LINE&WIDTH=300&HEIGHT=400&FORMAT=image/gif
+  Description:
+    Abstract: The LTSYSTEM data layer includes all trails within the Long Trail (LT) System.  The LTSYSTEM layer also
+      includes the portion of the Appalachian Trail (AT) within Vermont.  The Green Mountain Club (GMC) manages the Long
+      Trail System.  The LTSYSTEM layer was developed by the GMC from a variety of sources 
+    Purpose: To depict the location and extent of all trails within the Long Trail System.
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: 20060601
+        Time_of_Day: Unknown
+    Currentness_Reference: Publication Date
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: Unknown
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -73.454162
+      East_Bounding_Coordinate: -71.465281
+      North_Bounding_Coordinate: 45.018361
+      South_Bounding_Coordinate: 42.722789
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: ISO 19115 Topic Category
+      Theme_Keyword: society
+    Theme:
+      Theme_Keyword_Thesaurus: None
+      Theme_Keyword: Long Trail System
+      Theme_Keyword: Long Trail
+      Theme_Keyword: Trails
+      Theme_Keyword: Green Mountain Club
+    Place:
+      Place_Keyword_Thesaurus: None
+      Place_Keyword: Vermont
+    Temporal:
+      Temporal_Keyword_Thesaurus: None
+      Temporal_Keyword: 2003
+  Access_Constraints: VCGI, the Green Mountain Club, and the State of VT make no representations of any kind, including but not limited to the warranties of merchantability or fitness for a particular use, nor are any such warranties to be implied with respect to the data.
+  Use_Constraints: The Green Mountain Club DOES NOT PERMIT the use of this data (LTSYSTEM) for the production of commercial
+    hiking/trail maps of any kind.  Violators will be prosecuted to the fullest extent of the law.  The data can be used by
+    non-profit and public sector organizations for the production of maps which are not for sale.
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: Green Mountain Club
+      Contact_Address:
+        Address_Type: Mailing and Physical Address
+        Address: 4711 Waterbury-Stowe Rd
+        City: Waterbury Center
+        State_or_Province: VT
+        Postal_Code: 05677
+        Country: USA
+      Contact_Voice_Telephone: 802-244-7037
+      Contact_TDD/TTY_Telephone: None
+      Contact_Facsimile_Telephone: 802-244-5867
+      Contact_Electronic_Mail_Address: gmc@greenmountainclub.org
+      Hours_of_Service: 9am - 5pm, M-F
+  Browse_Graphic:
+    Browse_Graphic_File_Name: http://maps.vcgi.org:8080/wmsconnector/com.esri.wms.Esrimap?servicename=DATAWARE_VCGI&VERSION=1.1.1&request=getmap&BBOX=-73.45416,42.72279,-71.46528,45.018356&SRS=EPSG:4326&LAYERS=TOURISM_LTSYSTEM_LINE&WIDTH=300&HEIGHT=400&FORMAT=image/gif
+    Browse_Graphic_File_Description: GIF
+    Browse_Graphic_File_Type: GIF
+  Data_Set_Credit: Green Mountain Club
+  Security_Information:
+    Security_Classification_System: N/A
+    Security_Classification: Unclassified
+    Security_Handling_Description: No Security Considerations
+  Native_Data_Set_Environment: Arc/Info
+Data_Quality_Information:
+  Attribute_Accuracy:
+    Attribute_Accuracy_Report: Has not been assessed by GMC.
+  Logical_Consistency_Report: The LTSYSTEM data layer includes all trails within the Long Trail System in VT.  It also
+    includes the Appalachian Trail within the State of Vermont.
+  Positional_Accuracy:
+    Horizontal_Positional_Accuracy:
+      Horizontal_Positional_Accuracy_Report: Has not been assessed by GMC.  The data was derived from a variety of sources, therefore
+        the positional accuracy will vary.  Refer to the SOURCE and METHOD fields for feature level metadata.
+  Lineage:
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: GMC
+          Publication_Date: 20070614
+          Publication_Time: unknown
+          Title: Long Trail System trail map
+          Geospatial_Data_Presentation_Form: vector digital data
+          Publication_Information:
+            Publication_Place: Waterbury Ctr, Vermont
+            Publisher: GMC
+      Source_Scale_Denominator: Various
+    Process_Step:
+      Process_Description: GMC provided an LTSYSTEM shapefile to VCGI in June 2006.  VCGI drafted metadata
+        then loaded the data into the VGIS Data Warehouse for distribution.
+      Process_Date: 20070614
+      Process_Time: Unknown
+      Process_Contact:
+        Contact_Information:
+          Contact_Person_Primary:
+            Contact_Person: Steve Sharp
+            Contact_Organization: VCGI
+          Contact_Position: GIS Database Administrator
+Spatial_Data_Organization_Information:
+  Indirect_Spatial_Reference: LINE
+  Direct_Spatial_Reference_Method: Vector
+  Point_and_Vector_Object_Information:
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type: Complete chain
+      Point_and_Vector_Object_Count: number
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar:
+      Grid_Coordinate_System:
+        Grid_Coordinate_System_Name: State Plane Coordinate System 1983
+        State_Plane_Coordinate_System:
+          SPCS_Zone_Identifier: 4400
+          Transverse_Mercator:
+            Scale_Factor_at_Central_Meridian: 0.999964
+            Longitude_of_Central_Meridian: -72.500000
+            Latitude_of_Projection_Origin: 42.500000
+            False_Easting: 500000.000000
+            False_Northing: 0.000000
+      Planar_Coordinate_Information:
+        Planar_Coordinate_Encoding_Method: coordinate pair
+        Coordinate_Representation:
+          Abscissa_Resolution: 0.001
+          Ordinate_Resolution: 0.001
+        Planar_Distance_Units: Meters
+    Geodetic_Model:
+      Horizontal_Datum_Name: North American Datum of 1983
+      Ellipsoid_Name: Geodetic Reference System 80
+      Semi-major_Axis: 6378137
+      Denominator_of_Flattening_Ratio: 1 / 298.25722210
+  Vertical_Coordinate_System_Definition:
+    Altitude_System_Definition:
+      Altitude_Resolution: 0.000100
+      Altitude_Encoding_Method: Explicit elevation coordinate included with horizontal coordinates
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: Tourism_LTSYSTEM_line
+    Attribute:
+      Attribute_Label: OBJECTID
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: Shape
+      Attribute_Definition: Feature geometry.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Coordinates defining the features.
+    Attribute:
+      Attribute_Label: CLASS
+      Attribute_Definition: Trail classification.
+      Attribute_Definition_Source: GMC
+    Attribute:
+      Attribute_Label: SOURCE
+      Attribute_Definition: Source of trail location data.
+      Attribute_Definition_Source: GMC
+    Attribute:
+      Attribute_Label: NOTES
+      Attribute_Definition: General description of trail segment.
+      Attribute_Definition_Source: GMC
+    Attribute:
+      Attribute_Label: MILES
+      Attribute_Definition: Mileage of segment.
+      Attribute_Definition_Source: GMC
+    Attribute:
+      Attribute_Label: METHOD
+      Attribute_Definition: Method used to capture trail location such as GPS.
+      Attribute_Definition_Source: GMC
+    Attribute:
+      Attribute_Label: UPD_DATE
+      Attribute_Definition: Date the trail segment of entered or updated.
+      Attribute_Definition_Source: GMC
+    Attribute:
+      Attribute_Label: Shape_Length
+      Attribute_Definition: Length of feature in internal units.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Positive real numbers that are automatically generated.
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: VT Center for Geographic Information
+      Contact_Address:
+        Address_Type: Mailing and Physical Address
+        Address: 58 South Main Street, Suite 2
+        City: Waterbury
+        State_or_Province: VT
+        Postal_Code: 05676
+        Country: USA
+      Contact_Voice_Telephone: 802/882-3000
+      Contact_TDD/TTY_Telephone: None
+      Contact_Facsimile_Telephone: 802/882-3001
+      Contact_Electronic_Mail_Address: info@vcgi.org
+      Hours_of_Service: 9am - 5pm, M-F
+  Resource_Description: TourismTrails_LTSYSTEM
+  Distribution_Liability: VCGI and the State of Vermont make no representations of any kind, including but not limited to the warranties of merchantability or fitness for a particular use, nor are any such warranties to be implied with respect to the data.
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Format_Name: SHP
+        Format_Specification: ESRI Shapefile format (compressed into ZIP file format)
+        Format_Information_Content: geospatial data
+        File_Decompression_Technique: ZIP extraction tool
+      Digital_Transfer_Option:
+        Online_Option:
+          Computer_Contact_Information:
+            Network_Address:
+              Network_Resource_Name: http://www.vcgi.org/dataware/default.cfm?layer=TourismTrails_LTSYSTEM
+          Access_Instructions: Download from web site.
+        Offline_Option:
+          Offline_Media: CD-ROM
+        Offline_Option:
+          Offline_Media: 3-1/2 inch floppy disk
+        Offline_Option:
+          Offline_Media: 4 mm cartridge tape
+    Fees: No charge when downloading from the internet, and when no custom processing is required.
+    Ordering_Instructions:
+      Download from web site or mail-fax a copy of the VCGI 'Data Request Form' which
+      is available from the VGIS web site http://www.vcgi.org/dataware/order_forms
+    Turnaround: About 5 days.
+  Custom_Order_Process: Mail or Fax a copy of the VCGI 'Data Request Form' which is available from http://www.vcgi.org/dataware/order_forms
+  Technical_Prerequisites: ESRI Arc/Info, ArcView, or ArcExplorer software.
+  Available_Time_Period:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: 20060601
+        Time_of_Day: Unknown
+Metadata_Reference_Information:
+  Metadata_Date: 20060601
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: VT Center for Geographic Information
+        Contact_Person: GIS Database Administrator
+      Contact_Address:
+        Address_Type: Mailing and Physical Address
+        Address: 58 South Main Street, Suite 2
+        City: Waterbury
+        State_or_Province: VT
+        Postal_Code: 05676
+        Country: USA
+      Contact_Voice_Telephone: 802/882-3000
+      Contact_TDD/TTY_Telephone: None
+      Contact_Facsimile_Telephone: 802/882-3001
+  Metadata_Standard_Name: FGDC Content Standards for Digital Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Time_Convention: Local time
+  Metadata_Access_Constraints: None
+  Metadata_Use_Constraints: None
+  Metadata_Security_Information:
+    Metadata_Security_Classification_System: N/A
+    Metadata_Security_Classification: Unclassified
+    Metadata_Security_Handling_Description: No security considerations
