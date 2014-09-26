@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapbox Studio - A Primer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
+  <style type='text/css'>
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      letter-spacing:0px;
+      background:#375d81;
+      background-size:100%;
+      color:#fff;
+      margin:0;
+      padding:0;
+      font-weight:bold;
+    }
+
+    h1, h2, h3, p {
+      margin:0;
+    }
+
+    em, a {
+      font-style:normal;
+      color:#8dbd0c;
+    }
+
+    a {
+      background: #34d0e7;
+      color:#000;
+      text-decoration:none;
+    }
+
+    img {
+      width:100%;
+    }
+
+    iframe {
+      width:1100px;
+      height:600px;
+    }
+
+    div {
+      cursor:pointer;
+      cursor:hand;
+      position:absolute;
+      top:0px;
+      left:0px;
+      padding:75px;
+      line-height:103%;
+    }
+
+    div.center {
+      text-align:center;
+    }
+
+    div.imageText {
+      text-shadow:0px 0px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+  <script type='text/javascript'>
+    window.onload = function() {
+        var s = document.getElementsByTagName('div'), cur = 0, ti;
+        if (!s) return;
+        function go(n) {
+            cur = n;
+            var i = 1e3, e = s[n], t;
+            document.body.className = e.dataset.bodyclass || '';
+            for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+            e.style.display = 'inline';
+            e.style.fontSize = i + 'px';
+            if (e.firstChild && e.firstChild.nodeName === 'IMG') {
+                document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
+                e.firstChild.style.display = 'none';
+                if ('classList' in e) e.classList.add('imageText');
+            } else {
+                document.body.style.backgroundImage = '';
+                document.body.style.backgroundColor = e.style.backgroundColor;
+            }
+            if (ti !== undefined) window.clearInterval(ti);
+            t = parseInt(e.dataset.timeToNext || 0, 10);
+            if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
+            while (
+                e.offsetWidth > window.innerWidth ||
+                e.offsetHeight > window.innerHeight) {
+                e.style.fontSize = (i -= 2) + 'px';
+                if (i < 0) break;
+            }
+            e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
+            if (window.location.hash !== n) window.location.hash = n;
+            document.title = e.textContent || e.innerText;
+        }
+        document.onclick = function() { go(++cur % (s.length)); };
+        function fwd() { go(Math.min(s.length - 1, ++cur)); }
+        function rev() { go(Math.max(0, --cur)); }
+        document.onkeydown = function(e) {
+            if (e.which === 39 || e.which === 34 || e.which === 40) fwd();
+            if (e.which === 37 || e.which === 33 || e.which === 38) rev();
+        };
+        document.ontouchstart = function(e) {
+            var x0 = e.changedTouches[0].pageX;
+            document.ontouchend = function(e) {
+                var x1 = e.changedTouches[0].pageX;
+                if (x1 - x0 < 0) fwd();
+                if (x1 - x0 > 0) rev();
+            };
+        };
+        function parse_hash() {
+            return Math.max(Math.min(
+                s.length - 1,
+                parseInt(window.location.hash.substring(1), 10)), 0);
+        }
+        if (window.location.hash) cur = parse_hash() || cur;
+        window.onhashchange = function() {
+            var c = parse_hash();
+            if (c !== cur) go(c);
+        };
+        go(cur);
+    };
+  </script>
+</head>
+<body>
+  <div><em>Mapbox Studio - A Primer</em><br>October 15, 2014 - VCGI</div>
+  <div>Bill Morris<br><small>mapper at <a href="http://faraday.io" target="_blank">Faraday Inc</a></small></div>
+  <div>Maps for what?</div>
+  <div>Crisis management</div>
+  <div><iframe src="http://google.org/crisismap/us-wildfires"></iframe></div>
+  <div>Environmental conservation</div>
+  <div><iframe src="http://imapinvasives.org/nyimi/report_invasives/"></iframe></div>
+  <div>Civic planning and outreach</div>
+  <div><iframe src="http://www.burlingtonvt.gov/public/map.php"></iframe></div>
+  <div>Some options for how to do this include . . .</div>
+  <div><a href="http://www.ushahidi.com/product/ushahidi/" target="_blank">Ushahidi</a></div>
+  <div><iframe src="https://vtirene.crowdmap.com/"></iframe></div>
+  <div><iframe src="https://crowdmap.com/map/chicchocs/"></iframe></div>
+  <div><a href="http://openplans.org/shareabouts/" target="_blank">Shareabouts</a></div>
+  <div><iframe src="http://suggest.divvybikes.com/"></iframe></div>
+  <div>The hacky, free, and (mostly) open-source way . . .</div>
+  <div><em>Browser Capabilities</em></div>
+  <div>HTML5 Geolocation</div>
+  <div><iframe src="map2/"></iframe></div>
+  <div>IP Location</div>
+  <div><iframe src="http://ip-api.com/"></iframe></div>
+  <div>Search</div>
+  <div><iframe src="http://codeforbtv.org/votefinder/"></iframe></div>
+  <div>(Accuracy varies like a wandering coyote)</div>
+  <div>User-Selected Location</div>
+  <div><iframe src="http://bl.ocks.org/wboykinm/raw/7528178/"></iframe></div>
+  <div><em>Alert | </em> code ahead</div>
+  <div>We'll be using:</div>
+  <div><em>Github Pages</em> [Free]</div>
+  <div><em>Google Drive</em> [Free]</div>
+  <div><em>Bootstrap</em> [Free, Open-Source]</div>
+  <div><em>Leaflet</em> [Free, Open-Source]</div>
+  <div><em>CartoDB</em> [Free, Open-Source]</div>
+  <div>1.) Create a Google Form</div>
+  <div>2.) Fork <a href="https://github.com/wboykinm/publicinput-template" target="_blank">this github repository</a></div>
+  <div>3.) Copy some code: find the IDs for the questions in the source code of your google form</div>
+  <div>Things you'll need from that source (ctrl-f to find them):</div>
+  <div>embedUrl</div>
+  <div>form action</div>
+  <div>name="entry.<br>id="entry_<br><em>for each question and location field</em></div>
+  <div>4.) Confirm the survey responses are making it to the map</div>
+  <div><iframe src="http://wboykinm.github.io/publicinput-template"></iframe></div>
+  <div>5.) <em>The hard part: </em>get the word out to the people whose opinions you want</div>
+  <div>Thanks!</div>
+  <div>Get in touch:<br><a href="mailto:bill@faraday.io">bill@faraday.io</a></div>
+  <div>P.S. My apologies for all of the embedded content. These links will probably age quickly and be inaccessible.</div>
+  <div>P.P.S. However the project shown here will be accessible in <a href="https://github.com/wboykinm/publicinput-template" target="_blank">this github repository</a> for as long as github is around</div>
+
+</body>
+</html>
+
